@@ -16,21 +16,22 @@ Open Command Prompt or your terminal and navigate to the directory where you sav
 
 3. **Run the application:**
 Type the following command to start the application (Make sure you have Python installed):
+```bash
 python app.py
 
-4. **Access the application:**
+5. **Access the application:**
 Once the application is running, you will see a link provided in the prompt. Click on that link.
 
-5. **Explore the application:**
+6. **Explore the application:**
 You will now be redirected to the home page in your web browser. Navigate to the "Predict" button.
 
-6. **Enter necessary details:**
+7. **Enter necessary details:**
 Fill in the required information such as age, sex, cholesterol level, systolic blood pressure, diastolic blood pressure, cholesterol, height, and weight.
 
-7. **Get the prediction:**
+8. **Get the prediction:**
 After entering the necessary details, click the "Predict" button.
 
-8. **View the result:**
+9. **View the result:**
 You will receive the prediction indicating the presence or absence of heart disease based on the input parameters.
 
 Enjoy using our heart disease prediction application to assess heart health quickly and easily.
