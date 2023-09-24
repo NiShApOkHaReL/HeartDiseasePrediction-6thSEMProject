@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+
+    body {
+
+      background-image: url("{{ url_for('static', filename='doctor.jpg') }}");
+
+            background-size: cover;
+
+            background-repeat: no-repeat;
+
+            background-position: center;
+
+    }
+
+   
+
+  </style>
+
+  <title>Predict Form</title>
+
+</head>
+
+<body>
+
+ 
+
+ 
+
+  <!-- Navigation Bar -->
+
+  <nav class="bg-gray-500 bg-cover bg-center bg-no-repeat bg-fixed  h-16 flex justify-end items-center relative ">
+
+    <!-- Background Image -->
+
+   
+
+    <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: url_for('static', filename='heart.png');"></div>
+
+ 
+
+    <!-- Navigation Links -->
+
+    <ul class="z-10 flex space-x-6 pr-8">
+
+        <form method = "post" action = "/">
+
+           <button type="submit" class="text-white hover:text-gray-900"> Home </button>
+
+        </form>
+
+ 
+
+        <form method = "post" action = "/about">
+
+           <button type="submit" class="text-white hover:text-gray-900"> About Us </button>
+
+        </form>
+
+ 
+
+        <form method = "post" action = "/heart">
+
+           <button type="submit" class="text-white hover:text-gray-900"> Heart Disease </button>
+
+        </form>
+
+    </ul>
+
+</nav>
+
+ 
+
+<div class=" flex  min-h-screen ml-20 mt-10">
+
+  <div class="max-w-md w-full p-8  w-64 h-85 rounded-md shadow-md">
+
+   
+
+    <h2 class="text-2xl font-semibold mb-6">PREDICTION FORM</h2>
+
+    <form method="POST" action="/result">
+
+      <div class="mb-4">
+
+        <label for="age" class="block text-gray-700 font-semibold mb-2">Age</label>
+
+        <input type="number" id="age" name="age" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500" required>
+
+    </div>
+
+   
+
+    <div class="mb-4">
+
+        <label for="gender" class="block text-gray-700 font-semibold mb-2">Gender</label>
+
+        <input type="radio" id="male" name="gender" value="male" class="mr-2">
+
+        <label for="male" class="text-gray-600">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" class="ml-4">
+
+        <label for="female" class="text-gray-600">Female</label>
+
+    </div>
+
+   
+
+    <div class="mb-6">
+
+        <label for="height" class="block text-gray-700 font-semibold mb-2">Height(cm)</label>
+
+        <input type="number" id="height" name="height" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500" required>
+
+    </div>
+
+   
+
+    <div class="mb-4">
+
+        <label for="weight" class="block text-gray-700 font-semibold mb-2">Weight(kg)</label>
+
+        <input type="number" id="weight" name="weight" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500" required>
+
+    </div>
+
+   
+
+    <div class="mb-4">
+
+        <label for="systolic_bp" class="block text-gray-700 font-semibold mb-2">Systolic Bp</label>
+
+        <input type="number" id="systolic_bp" name="systolic_bp" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500" required>
+
+    </div>
+
+   
+
+    <div class="mb-4">
+
+        <label for="diastolic_bp" class="block text-gray-700 font-semibold mb-2">Diastolic Bp</label>
+
+        <input type="number" id="diastolic_bp" name="diastolic_bp" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500" required>
+
+    </div>
+
+   
+
+    <div class="mb-4">
+
+      <label for="chol" class="block text-gray-700 font-semibold mb-2">Cholesterol Level</label>
+
+          <select name="chol" id="chol" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500">
+
+            <option> </option>
+
+            <option value="normal">Normal</option>
+
+            <option value="medium">Above normal</option>
+
+            <option value="high">Well Above Normal</option>
+
+          </select>
+
+    </div>
+
+ 
+
+  <div class="mb-4">
+
+    <label for="gluc" class="block text-gray-700 font-semibold mb-2">Glucose Level</label>
+
+        <select name="gluc" id="gluc" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500">
+
+          <option> </option>
+
+          <option value="normal">Normal</option>
+
+          <option value="medium">Above normal</option>
+
+          <option value="high">Well Above Normal</option>
+
+        </select>
+
+  </div>
+
+   
+
+    <div class="mb-4">
+
+        <label for="smoke" class="block text-gray-700 font-semibold mb-2">Smoke</label>
+
+        <input type="radio" id="smoke_yes" name="smoke" value="yes" class="mr-2">
+
+        <label for="smoke_yes" class="text-gray-600">Yes</label>
+
+        <input type="radio" id="smoke_no" name="smoke" value="no" class="ml-4">
+
+        <label for="smoke_no" class="text-gray-600">No</label>
+
+    </div>
+
+   
+
+    <div class="mb-4">
+
+        <label for="alcohol" class="block text-gray-700 font-semibold mb-2">Alcohol</label>
+
+        <input type="radio" id="alcohol_yes" name="alcohol" value="yes" class="mr-2">
+
+        <label for="alcohol_yes" class="text-gray-600">Yes</label>
+
+        <input type="radio" id="alcohol_no" name="alcohol" value="no" class="ml-4">
+
+        <label for="alcohol_no" class="text-gray-600">No</label>
+
+    </div>
+
+   
+
+    <div class="mb-4">
+
+        <label for="exercise" class="block text-gray-700 font-semibold mb-2">Exercise</label>
+
+        <input type="radio" id="exercise_yes" name="exercise" value="yes" class="mr-2">
+
+        <label for="exercise_yes" class="text-gray-600">Yes</label>
+
+        <input type="radio" id="exercise_no" name="exercise" value="no" class="ml-4">
+
+        <label for="exercise_no" class="text-gray-600">No</label>
+
+    </div>
+
+ 
+
+      <div>
+
+        <button type="submit" class="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 mt-8">Predict</button>
+
+      </div>
+
+   
+
+    </form>
+
+ 
+
+     <!-- Display prediction result here -->
+
+     {% if prediction %}
+
+     <p class="text-2xl mt-4">Prediction: {{ prediction }}</p>
+
+ {% endif %}
+
+ 
+
+  </div>
+
+</div>
+
+ 
+
+</body>
+
+ 
+
+</html>
+
+ 

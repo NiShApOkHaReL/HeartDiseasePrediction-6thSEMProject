@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-500 bg-cover bg-center bg-no-repeat bg-fixed h-16 flex justify-end items-center relative">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: url_for('static', filename='heart.png');"></div>
+
+        <!-- Navigation Links -->
+        <ul class="z-10 flex space-x-6 pr-8">
+            <form method = "post" action = "/">
+               <button type="submit" class="text-white hover:text-gray-900"> Home </button>
+            </form>
+
+            <form method = "post" action = "/about">
+               <button type="submit" class="text-white hover:text-gray-900"> About Us </button>
+            </form>
+
+            <form method = "post" action = "/heart">
+               <button type="submit" class="text-white hover:text-gray-900"> Heart Disease </button>
+            </form>
+        </ul>
+    </nav>
+
+ <!-- About Us Content -->
+ <div class="container mx-auto mt-8 ml-40">
+    <h1 class="text-2xl font-bold mb-8">Meet Our Team</h1>
+
+    <!-- Member 1: Garima Paudel and Member 2: Aayushma Paudel -->
+    <div class="flex flex-wrap mb-8 md:mb-16">
+        <!-- Member 1: Garima Paudel -->
+        <div class="w-full md:w-1/2 mb-8 md:mb-0">
+            <img src="{{ url_for('static', filename='garima.jpg') }}" alt="Garima Paudel" class="w-32 h-32 md:w-60 md:h-60 rounded-full mr-8 md:mr-12">
+            <div>
+                <h2 class="text-xl md:text-2xl font-semibold">Garima Paudel</h2>
+                <p class="text-gray-600">United Technical College</p>
+                <!-- Add more information about Garima Paudel here -->
+            </div>
+        </div>
+
+        <!-- Member 2: Aayushma Paudel -->
+        <div class="w-full md:w-1/2">
+            <img src="{{ url_for('static', filename='aayushma.jpg') }}" alt="Aayushma Paudel" class="w-32 h-32 md:w-60 md:h-60 rounded-full mr-8 md:mr-12">
+            <div>
+                <h2 class="text-xl md:text-2xl font-semibold">Aayushma Paudel</h2>
+                <p class="text-gray-600">United Technical College</p>
+                <!-- Add more information about Aayushma Paudel here -->
+            </div>
+        </div>
+    </div>
+
+     <!-- Member 1: Nisha Pokharel and Member 2: Anisha Silwal -->
+     <div class="flex flex-wrap mb-8 md:mb-16">
+        <!-- Member 1: Anisha Silwal -->
+        <div class="w-full md:w-1/2 mb-8 md:mb-0">
+            <img src="{{ url_for('static', filename='anisha.jpg') }}" alt="Anisha Silwal" class="w-32 h-32 md:w-60 md:h-60 rounded-full mr-8 md:mr-12">
+            <div>
+                <h2 class="text-xl md:text-2xl font-semibold">Anisha Silwal</h2>
+                <p class="text-gray-600">United Technical College</p>
+                <!-- Add more information about Anisha Silwal here -->
+            </div>
+        </div>
+
+        <!-- Member 2: Nisha Pokharel -->
+        <div class="w-full md:w-1/2">
+            <img src="{{ url_for('static', filename='nisha.jpg') }}" alt="Nisha Pokharel" class="w-32 h-32 md:w-60 md:h-60 rounded-full mr-8 md:mr-12">
+            <div>
+                <h2 class="text-xl md:text-2xl font-semibold">Nisha Pokharel</h2>
+                <p class="text-gray-600">United Technical College</p>
+                <!-- Add more information about Nisha Pokharel here -->
+            </div>
+        </div>
+    </div>
+
+<!-- Add any additional styling or scripts as needed -->
+</body>
+</html>
+
+    
+</body>
+</html>

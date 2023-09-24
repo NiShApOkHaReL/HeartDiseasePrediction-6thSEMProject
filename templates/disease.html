@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-500 bg-cover bg-center bg-no-repeat bg-fixed h-16 flex justify-end items-center relative">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: url_for('static', filename='heart.png');"></div>
+
+        <!-- Navigation Links -->
+        <ul class="z-10 flex space-x-6 pr-8">
+            <form method="post" action="/">
+               <button type="submit" class="text-white hover:text-gray-900"> Home </button>
+            </form>
+
+            <form method="post" action="/about">
+               <button type="submit" class="text-white hover:text-gray-900"> About Us </button>
+            </form>
+
+            <form method="post" action="/heart">
+               <button type="submit" class="text-white hover:text-gray-900"> Heart Disease </button>
+            </form>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="flex justify-between items-start">
+        <!-- Left Side - Heart Disease Information -->
+        <div class="content ml-4 flex-1 mt-5">
+            <h1 class="text-2xl font-bold">Heart Disease</h1>
+            <p>Heart disease encompasses various conditions affecting the heart and blood vessels, leading to a major cause of global mortality.</p>
+            <h2 class="text-xl mt-6 font-bold">Symptoms</h2>
+            <ul class="list-disc ml-6">
+                <li>Chest pain (angina)</li>
+                <li>Shortness of breath</li>
+                <li>Fatigue</li>
+                <li>Irregular heartbeats</li>
+                <li>Dizziness</li>
+                <li>Fainting</li>
+            </ul>
+            <h2 class="text-xl font-bold mt-6">Prevention</h2>
+            <ul class="list-disc ml-6">
+                <li>Maintain a healthy diet</li>
+                <li>Exercise regularly</li>
+                <li>Quit smoking</li>
+                <li>Limit alcohol consumption</li>
+                <li>Manage stress</li>
+                <li>Control blood pressure and diabetes</li>
+                <li>Maintain a healthy weight</li>
+                <li>Attend regular check-ups</li>
+                <li>Follow prescribed medications when necessary</li>
+            </ul>
+        </div>
+
+        <!-- Right Side - Rounded Images -->
+        <div class="flex-1">
+            <div class="grid grid-cols-2 gap-2 mt-4">
+                <div class="w-40 h-40 rounded-full overflow-hidden mt-2">
+                    <img src="{{ url_for('static', filename='dizziness.jpg') }}" alt="Figure 1: Dizziness" class="w-full h-full object-cover">
+                </div>
+               
+                <div class="w-40 h-40 rounded-full overflow-hidden mt-2">
+                    <img src="{{ url_for('static', filename='vomiting.jpg') }}" alt="Figure 2: Vomiting" class="w-full h-full object-cover">
+                </div>
+                <div class="w-40 h-40 rounded-full overflow-hidden mt-12">
+                    <img src="{{ url_for('static', filename='sweating.jpg') }}" alt="Figure 3: Sweating" class="w-full h-full object-cover">
+                </div>
+                <div class="w-40 h-40 rounded-full overflow-hidden mt-12">
+                    <img src="{{ url_for('static', filename='chestpain.jpg') }}" alt="Figure 4: Chest Pain" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
