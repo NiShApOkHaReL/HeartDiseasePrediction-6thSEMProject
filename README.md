@@ -16,9 +16,10 @@ Open Command Prompt or your terminal and navigate to the directory where you sav
 
 3. **Run the application:**
 Type the following command to start the application (Make sure you have Python installed):
+
 ```bash
 python app.py
-
+```
 5. **Access the application:**
 Once the application is running, you will see a link provided in the prompt. Click on that link.
 
