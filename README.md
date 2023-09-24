@@ -9,7 +9,8 @@ To use this heart disease prediction application, follow these simple steps:
    Clone this repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/your-username/heart-disease-prediction.git
+   git clone https://github.com/NiShApOkHaReL/HeartDiseasePrediction-6thSEMProject
+
 
 2. **Navigate to the project directory:**
 Open Command Prompt or your terminal and navigate to the directory where you saved the project.
