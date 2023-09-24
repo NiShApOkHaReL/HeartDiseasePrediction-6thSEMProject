@@ -28,7 +28,7 @@ Once the application is running, you will see a link provided in the prompt. Cli
 You will now be redirected to the home page in your web browser. Navigate to the "Predict" button.
 
 7. **Enter necessary details:**
-Fill in the required information such as age, sex, cholesterol level, systolic blood pressure, diastolic blood pressure, cholesterol, height, and weight.
+Fill in the required information such as age, sex, cholesterol level, systolic blood pressure, diastolic blood pressure, height, and weight.
 
 8. **Get the prediction:**
 After entering the necessary details, click the "Predict" button.
